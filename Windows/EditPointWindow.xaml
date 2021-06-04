@@ -1,0 +1,26 @@
+﻿<Window x:Class="CrawlerCraneVisual.Windows.EditPointWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrawlerCraneVisual.Windows"
+        mc:Ignorable="d"
+        Title="Задать точку" Height="120" Width="200" WindowStartupLocation="CenterOwner" SizeToContent="WidthAndHeight">
+    <Grid Background="#FF1D1D1D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Content="X:" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Foreground="White"/>
+        <Label Content="Y:" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Foreground="White"/>
+        <TextBox Text="{Binding X}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16" Foreground="White" Background="#FF646464"/>
+        <TextBox Text="{Binding Y}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="16" Foreground="White" Background="#FF646464"/>
+        <Button x:Name="OK_button" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Content="OK" FontSize="18" IsDefault="True" Click="OK_button_Click" Background="#FFC3C3C3"/>
+        <Button x:Name="Cancel_button" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Content="Cancel" FontSize="18" IsCancel="True" Background="#FFC3C3C3"/>
+    </Grid>
+</Window>
